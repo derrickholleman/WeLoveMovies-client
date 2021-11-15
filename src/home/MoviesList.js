@@ -37,7 +37,13 @@ function MoviesList() {
       <ErrorAlert error={error} />
       <h2 className="font-poppins">Now Showing</h2>
       <hr />
-      <section className="row">{list}</section>
+      <div>
+        {movies.length ? (
+          <section className="row">{list}</section>
+        ) : (
+          <h4 style={{ color: "red" }}>Loading Movies...</h4>
+        )}
+      </div>
     </main>
   );
 }
