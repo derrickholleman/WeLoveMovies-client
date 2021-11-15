@@ -67,7 +67,7 @@ function populateTheaters(signal) {
  *  a promise that resolves to a possibly empty array of movies saved in the database.
  */
 export async function listMovies(signal) {
-  const url = new URL(`${API_BASE_URL}/movies`);
+  const url = new URL(`${API_BASE_URL}/movies?is_showing=true`);
   const addReviews = populateReviews(signal);
   return await fetchJson(url, { headers, signal }, []).then((movies) =>
     Promise.all(movies.map(addReviews))
