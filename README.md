@@ -19,9 +19,13 @@ This project was designed to test my ability to build complex servers and access
 
 - Express
 - Node.js
+- React
 - Knex
 - PostgreSQL
 - CORS
+- DBeaver
+- Postman
+- Bootstrap
 
 ## Deployment
 
