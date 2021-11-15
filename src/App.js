@@ -4,6 +4,7 @@ import DetailedMoviesList from "./movies/DetailedMoviesList";
 import FullMovie from "./movie/FullMovie";
 import TheaterList from "./theaters/TheaterList";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import NotFound from "./shared/NotFound";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route exact path="/theaters">
           <TheaterList />
+        </Route>
+        <Route path="*">
+          <NotFound />
         </Route>
       </Switch>
     </Router>
