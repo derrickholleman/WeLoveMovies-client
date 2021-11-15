@@ -27,6 +27,8 @@ This project was designed to test my ability to build complex servers and access
 
 - [We Love Movies App](https://we-love-movies-site.netlify.app/)
 
+- [Server Repo](https://github.com/derrickholleman/WeLoveMovies-server/)
+
 ## Screenshots
 
 ![Screenshot](./images/all_movies.png)
