@@ -33,11 +33,13 @@ function FullMovie() {
   }
 
   function updateScoreHandler(
+    // set movie_id and review_id from the review object that gets passed in on click
     { movie_id: movieId, review_id: reviewId },
     score,
     critic_id,
     movie_id
   ) {
+    // update review based on passed in id and destructured incoming data
     updateReview(reviewId, { score, critic_id, movie_id }).then(() =>
       loadMovie(movieId)
     );
@@ -61,7 +63,7 @@ function FullMovie() {
           <ReviewList
             reviews={movie.reviews}
             deleteReview={deleteReviewHandler}
-            setReviewScore={updateScoreHandler}
+            updateScoreHandler={updateScoreHandler}
           />
         </aside>
       </section>

@@ -5,17 +5,17 @@ const scoreButtonStyle = {
   padding: "0 0px 5px 5px",
 };
 
-function Review({ review, deleteReview, setReviewScore }) {
+function Review({ review, deleteReview, updateScoreHandler }) {
   const handleIncreaseClick = () => {
     const score = review.score + 1;
     if (score > 5) return;
-    setReviewScore(review, score, review.critic_id, review.movie_id);
+    updateScoreHandler(review, score, review.critic_id, review.movie_id);
   };
 
   const handleDecreaseClick = () => {
     const score = review.score - 1;
     if (score < 1) return;
-    setReviewScore(review, score, review.critic_id, review.movie_id);
+    updateScoreHandler(review, score, review.critic_id, review.movie_id);
   };
 
   const { critic } = review;

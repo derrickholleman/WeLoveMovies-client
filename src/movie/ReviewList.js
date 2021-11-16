@@ -1,7 +1,7 @@
 import React from "react";
 import Review from "./Review";
 
-function ReviewList({ reviews = [], deleteReview, setReviewScore }) {
+function ReviewList({ reviews = [], deleteReview, updateScoreHandler }) {
   if (reviews.length) {
     const list = reviews
       .sort((leftReview, rightReview) => {
@@ -14,7 +14,7 @@ function ReviewList({ reviews = [], deleteReview, setReviewScore }) {
           key={review.review_id}
           review={review}
           deleteReview={deleteReview}
-          setReviewScore={setReviewScore}
+          updateScoreHandler={updateScoreHandler}
         />
       ));
 
