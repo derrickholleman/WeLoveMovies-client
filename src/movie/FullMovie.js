@@ -23,14 +23,19 @@ function FullMovie() {
   }
 
   function deleteReviewHandler({ movie_id: movieId, review_id: reviewId }) {
-    deleteReview(reviewId).then(() => loadMovie(movieId));
+    let confirmDelete = window.confirm(
+      "Are you sure you want to delete this review?  It cannot be undone!"
+    );
+
+    if (confirmDelete) {
+      deleteReview(reviewId).then(() => loadMovie(movieId));
+    }
   }
 
   function updateScoreHandler(
     { movie_id: movieId, review_id: reviewId },
     score
   ) {
-    console.log("score", reviewId, score);
     updateReview(reviewId, { score }).then(() => loadMovie(movieId));
   }
 
