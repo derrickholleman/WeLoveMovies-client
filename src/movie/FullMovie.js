@@ -34,9 +34,13 @@ function FullMovie() {
 
   function updateScoreHandler(
     { movie_id: movieId, review_id: reviewId },
-    score
+    score,
+    critic_id,
+    movie_id
   ) {
-    updateReview(reviewId, { score }).then(() => loadMovie(movieId));
+    updateReview(reviewId, { score, critic_id, movie_id }).then(() =>
+      loadMovie(movieId)
+    );
   }
 
   return (

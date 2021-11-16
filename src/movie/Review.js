@@ -9,13 +9,13 @@ function Review({ review, deleteReview, setReviewScore }) {
   const handleIncreaseClick = () => {
     const score = review.score + 1;
     if (score > 5) return;
-    setReviewScore(review, score);
+    setReviewScore(review, score, review.critic_id, review.movie_id);
   };
 
   const handleDecreaseClick = () => {
     const score = review.score - 1;
     if (score < 1) return;
-    setReviewScore(review, score);
+    setReviewScore(review, score, review.critic_id, review.movie_id);
   };
 
   const { critic } = review;
